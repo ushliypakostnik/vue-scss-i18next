@@ -1,0 +1,122 @@
+// Project variables
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Paths
+$images__path--root: "assets/images/";
+
+
+// Sizes and rounding
+//////////////////////////////////////////////////////
+
+$gutter: 20px;
+
+$border-width: 2px;
+
+$border-radius__large: 12px;
+$border-radius__small: 7px;
+
+$controls__height: 70px;
+
+
+// Elements
+//////////////////////////////////////////////////////
+
+
+// Buttons
+
+$buttons__border-radius: $border-radius__small;
+
+$buttons__height: $controls__height;
+
+
+// Inputs
+
+$inputs__height: $controls__height;
+
+
+// Views
+//////////////////////////////////////////////////////
+
+$loader__size--default: 100px;
+
+$header__height: 70px;
+
+
+// Layouts
+//////////////////////////////////////////////////////
+
+$layouts__modal: 2500;
+$layouts__fixed: 2000;
+$layouts__popups: 1500;
+$layouts__content: 1000;
+
+
+// Effects
+//////////////////////////////////////////////////////
+
+$fade: 0.2;
+$fade--percent: 8%;
+
+$shadows__coords-x: 0;
+$shadows__coords-y: 0;
+$shadows__size: 10px;
+$shadows__stretch: 0;
+
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+$transition-delay: 0s;
+
+$animation-duration: $transition-duration * 3;
+
+
+// Colors
+//////////////////////////////////////////////////////
+
+// Palette
+
+$colors__white: #fff;
+$colors__black: #000;
+
+$colors__primary: #b0b2f0;
+$colors__second: #d930aa;
+
+
+// Grays
+$colors__grays--lighter: #fafafa;
+
+
+// Links
+$colors__link: $colors__primary;
+$colors__link--hover: darken(#44529c, $fade);
+
+
+// Borders and shadows
+
+$colors__shadows: $colors__black;
+
+$colors__border: $colors__grays--lighter !default;
+$colors__placeholder: $colors__border !default;
+
+
+// Breackpoints and containers
+//////////////////////////////////////////////////////
+
+// Minimum Supported Width
+$breackpoints__min:                 320px;
+
+// Extra small screen / XS / phone
+$breackpoints__xs:                  359px;
+
+// Small screen / SM / tablet
+$breackpoints__sm:                  768px;
+
+// Medium screen / MD desktop / нетбуки типо чтоле
+$breackpoints__md:                  1025px;
+
+// Large screen / LG desktop / небольшие экраны - ноуты
+$breackpoints__lg:                  1240px;
+
+$breackpoints__xs_max:              ($breackpoints__sm - 1);
+$breackpoints__sm_max:              ($breackpoints__md - 1);
+$breackpoints__md_max:              ($breackpoints__lg - 1);

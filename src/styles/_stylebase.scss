@@ -1,0 +1,26 @@
+// Stylebase
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Uncompiled kitchen
+@import "./utils/_functions.scss";
+@import "./utils/_variables.scss";
+@import "./utils/_mixins.scss";
+@import "./utils/_placeholders.scss";
+
+// Core base normal style and common utils
+@import "./core/_animations.scss";
+@import "./core/_typography.scss";
+@import "./core/_grid.scss";
+@import "./core/_base.scss";
+@import "./core/_utilities.scss";
+
+// App styles
+@import "./widgets/_widgets.scss";
+
+// App themes
+@import "./themes/_themes-content.scss";
+@import "./themes/_theme-dark.scss";
+@import "./themes/_theme-light.scss";
+
+// External libraries customization

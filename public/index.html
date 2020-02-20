@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Vue Cli Based PWA example</title>
+    <meta
+      name="description"
+      content="Web site created using vue cli"
+    />
+
+    <script>
+      var ieVersion = (function() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE');
+        if (msie > 0) {
+          return parseInt (ua.substring(msie + 5, ua.indexOf('.', msie)));
+        }
+        if (ua.indexOf('Trident/7.0') + 1) {
+          return 11;
+        }
+        return 0;
+      })();
+      if (ieVersion && ieVersion <= 9) {
+        location.href = './legacy.html';
+      }
+    </script>
+
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <!-- Tell the browser it's a PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Make sure theme-color is defined -->
+    <meta name="theme-color" content="#ffffff">
+
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      #legacy {
+        height: 100%;
+        padding-top: 15%;
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        font-size: large;
+      }
+      @supports (height: 100vh) {
+        html,
+        body,
+        #legacy {
+          height: 100vh;
+        }
+      }
+      @supports (display: flex) {
+        #legacy {
+          padding-top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vue-test doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+        <div id="legacy">Loading site...</div>
+    </div>
+    <script>
+      if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

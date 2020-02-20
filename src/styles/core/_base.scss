@@ -1,0 +1,135 @@
+// Main Elements normalization
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// @media all {}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  height: 100%;
+  color: $colors--black;
+  background: $colors--white;
+  margin: 0;
+  padding: 0;
+  quotes: "\00ab" "\00bb";
+
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden; // not scrolling horizontal body
+
+  backface-visibility: hidden;
+
+  // Normal text
+  @include text($font-family__sans, $font-size--small, $font-weight__sans__regular);
+
+  ::selection {
+    background: fade-out($colors__second, $fade * 3);
+  }
+}
+
+// stylelint-disable declaration-no-important, no-descending-specificity, block-opening-brace-newline-after, block-closing-brace-newline-before, rule-empty-line-before, block-opening-brace-space-before
+
+// No outline on focus controls!!!
+button,
+input,
+textarea,
+a {
+  outline: none !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none !important;
+  }
+}
+
+// Sections
+
+// All blocks to border-box!!!
+main,
+article,
+aside,
+figure,
+address
+section,
+div,
+form,
+fieldset,
+input,
+select,
+button,
+a {
+  box-sizing: border-box;
+}
+
+main,
+article,
+aside,
+figure,
+address,
+div,
+form,
+fieldset,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+
+// Others
+fieldset,
+iframe {
+  border-width: 0;
+}
+
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+// WebKit Scrollbar
+//////////////////////////////////////////////////////
+
+/*
+// Let's get this party started
+::-webkit-scrollbar {
+  width: $scrollbar_width;
+}
+// Track
+::-webkit-scrollbar-track {
+  background: $colors_scrollbar_track;
+}
+// Handle
+::-webkit-scrollbar-thumb {
+  background: $colors_scrollbar-thumb;
+  border: 1px solid $colors_scrollbar_track;
+}
+*/
+
+// Customize Placeholder
+//////////////////////////////////////////////////////
+
+::-webkit-input-placeholder {color: $colors__placeholder !important;}
+::-moz-placeholder          {color: $colors__placeholder !important;} /* Firefox 19+ */
+:-moz-placeholder           {color: $colors__placeholder !important;} /* Firefox 18- */
+:-ms-input-placeholder      {color: $colors__placeholder !important;}
+
+:focus::-webkit-input-placeholder {color: transparent;}
+:focus::-moz-placeholder          {color: transparent;}
+:focus:-moz-placeholder           {color: transparent;}
+:focus:-ms-input-placeholder      {color: transparent;}
+
+// stylelint-enable declaration-no-important, no-descending-specificity, block-opening-brace-newline-after, block-closing-brace-newline-before, rule-empty-line-before, block-opening-brace-space-before

@@ -1,0 +1,39 @@
+// App themes
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@mixin themes-content {
+  // Base
+
+  input {
+    border: 1px solid $colors__border;
+  }
+
+  // stylelint-disable-next-line selector-list-comma-newline-after, no-descending-specificity
+  h1, h2, h3, h4, h5, h6 {
+    color: $colors__text;
+  }
+
+  // Main selectors
+
+  .layout {
+    background: $colors__background;
+  }
+
+  .header {
+    background: $colors__background;
+    border-bottom: 1px solid $colors__border;
+  }
+
+  .form {
+    background: $colors__card;
+    border: 1px solid $colors__border;
+  }
+
+  .switch {
+    background: $colors__card;
+    color: $colors__text;
+    border: 1px solid $colors__border;
+  }
+}

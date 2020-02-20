@@ -1,0 +1,23 @@
+// App dark theme
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+%theme-dark {
+  $colors__background: #263340 !global;
+  $colors__text: #aebfd0 !global;
+  $colors__card: #1c2630 !global;
+  $colors__border: #131920 !global;
+  $colors__header: $colors__white !global;
+
+  $colors__placeholder: $colors__border !global;
+}
+
+.app {
+  &--dark {
+    @extend %theme-dark !optional;
+
+    @include themes-content;
+  }
+}
+

@@ -1,0 +1,33 @@
+// Project Animations
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Multiply Animation Mixin
+@mixin animations($animate...) {
+  $max: length($animate);
+  $animations: "";
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+
+  animation: $animations;
+}
+
+
+// Keyframes example
+//////////////////////////////////////////////////////
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

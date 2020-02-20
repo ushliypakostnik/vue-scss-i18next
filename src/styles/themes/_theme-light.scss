@@ -1,0 +1,22 @@
+// App light theme
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+%theme-light {
+  $colors__background: #fafafa !global;
+  $colors__text: #6c7a89 !global;
+  $colors__card: $colors__white !global;
+  $colors__border: #c6dde5 !global;
+  $colors__header: #3f4750 !global;
+
+  $colors__placeholder: $colors__border !global;
+}
+
+.app {
+  &--light {
+    @extend %theme-light !optional;
+
+    @include themes-content;
+  }
+}

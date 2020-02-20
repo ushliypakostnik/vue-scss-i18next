@@ -1,0 +1,103 @@
+// Typography
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Typographic Variables
+//////////////////////////////////////////////////////
+
+// Good line-height and letter-spacing
+$line-height--base: 1.428571429;
+$normal-letter-spacing: normal;
+
+// Guide
+
+$font-size--base: 16px;
+$font-size__coefficient--large: 4;
+$font-size__coefficient--normal: 1.5;
+$font-size__coefficient--small: 1;
+$font-size__coefficient--xsmall: 0.9;
+
+$font-size--large: round($font-size--base * $font-size__coefficient--large); // 24px
+$font-size--normal: round($font-size--base * $font-size__coefficient--normal); // 18px
+$font-size--small: round($font-size--base * $font-size__coefficient--small); // 14px
+$font-size--xsmall: round($font-size--base * $font-size__coefficient--xsmall); // 13px
+
+$line-height--computed: round($font-size--base * $line-height--base);
+$line-height--large: floor($line-height--computed * $font-size__coefficient--large); // 34px
+$line-height--normal: floor($line-height--computed * $font-size__coefficient--normal); // 26px
+$line-height--small: floor($line-height--computed * $font-size__coefficient--small); // 20px
+$line-height--xsmall: floor($line-height--computed * $font-size__coefficient--xsmall); // 18px
+
+// stylelint-disable value-keyword-case
+$font-family__sans: "Open Sans", Helvetica, Arial, sans-serif;
+// stylelint-enable value-keyword-case
+$font-weight__sans__regular: 400;
+$font-weight__sans__bold: 700;
+
+// Universal Typographic Mixin
+//////////////////////////////////////////////////////
+
+// We use one, only one, Karl, a universal admixture for all cases !!!!!!!!!!
+
+@mixin text($font-family, $font-size, $font-weight) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $normal-letter-spacing;
+
+  @if $font-size == $font-size--large {
+    line-height: $line-height--large;
+  } @else if $font-size == $font-size--normal {
+    line-height: $line-height--normal;
+  } @else if $font-size == $font-size--small {
+    line-height: $line-height--small;
+  } @else if $font-size == $font-size--xsmall {
+    line-height: $line-height--xsmall;
+  } @else {
+    line-height: floor($font-size * $line-height--base);
+  }
+}
+
+// Base Typographic
+//////////////////////////////////////////////////////
+
+p {
+  margin-bottom: $gutter / 2;
+  @include text($font-family__sans, $font-size--small, $font-weight__sans__regular);
+}
+
+h1 {
+  @include text($font-family__sans, $font-size--large, $font-weight__sans__bold);
+
+  @include xs {
+    @include text($font-family__sans, $font-size--normal, $font-weight__sans__bold);
+  }
+}
+
+h2 {
+  @include text($font-family__sans, $font-size--large, $font-weight__sans__regular);
+
+  @include xs {
+    @include text($font-family__sans, $font-size--normal, $font-weight__sans__regular);
+  }
+}
+
+h3 {
+  @include text($font-family__sans, $font-size--normal, $font-weight__sans__bold);
+}
+
+h4 {
+  @include text($font-family__sans, $font-size--small, $font-weight__sans__regular);
+}
+
+h5 {
+  @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__bold);
+}
+
+h6 {
+  @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__regular);
+}
+
+strong {
+  font-weight: $font-weight__sans__bold;
+}

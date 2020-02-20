@@ -1,0 +1,80 @@
+// App common widgets styles
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+.form {
+  min-width: 300px;
+  margin-bottom: $gutter;
+  padding: $gutter $gutter ($gutter / 2) $gutter;
+  border-radius: $border-radius__large;
+
+  &__group {
+    position: relative;
+    text-align: center;
+    padding-bottom: $inputs__height - 5px;
+
+    button + button {
+      margin-top: $gutter / 2;
+    }
+
+    &--social {
+      padding-bottom: $gutter / 2;
+    }
+  }
+
+  &--vertical {
+    input,
+    button { // stylelint-disable no-descending-specificity
+      width: 100%;
+    }
+  }
+
+  &__message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: $inputs__height * 1.1;
+    @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__regular);
+
+    &--error {
+      // color: $colors__error;
+    }
+
+    &--success {
+      // color: $colors__success;
+    }
+  }
+}
+
+.switch {
+  display: inline-block;
+  background: $colors__white;
+  border: 1px solid $colors__border;
+  border-radius: $border-radius__small;
+  white-space: nowrap;
+  padding: ($gutter / 4) ($gutter / 2);
+
+  > li {
+    display: inline-block;
+    @include text($font-family__sans, $font-size--normal, $font-weight__sans__regular);
+
+    a {
+      @include link-color($colors__primary, darken($colors__primary, $fade--percent));
+    }
+
+    &:not(:last-child) {
+      &:after {
+        text-align: center;
+        margin-left: $gutter / 4;
+        margin-right: $gutter / 4;
+        content: " / ";
+      }
+    }
+  }
+
+  & + .switch {
+    margin-left: $gutter;
+  }
+}

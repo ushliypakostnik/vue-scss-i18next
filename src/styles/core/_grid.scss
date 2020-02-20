@@ -1,0 +1,105 @@
+// Grid
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Admixture for building a simple rubber mesh
+// from a given number of columns
+// with the specified rubber spacing in percent between them
+// @author Levon Gambaryan
+//
+// @param {Number} $columns - number of columns
+// @param {Percentage} $gutter - percentage indent
+//
+@mixin make-grid($columns, $gutter) {
+  // Calculate the column width
+  $column-width: (100% - ($gutter * ($columns - 1))) / $columns;
+
+  > div,
+  > li {
+    width: $column-width;
+
+    // Indent all columns except the last
+    &:not(:nth-child(#{$columns}n)) {
+      margin-right: $gutter;
+    }
+
+    // The last column has no indentation
+    &:nth-child(#{$columns}n) {
+      margin-right: 0;
+    }
+
+    // Glued blocks
+    @for $i from 2 to $columns {
+      &.glued-#{$i} {
+        width: $column-width * $i + $gutter * ($i - 1);
+      }
+    }
+  }
+
+  &.no-mobile {
+    > div,
+    > li {
+      // On mobile - expand the grid into a column
+      @include xs {
+        display: block;
+        width: 100%;
+      }
+
+      &:not(:nth-child(#{$columns}n)) {
+        // On mobile we set zero indent to all columns
+        @include xs {
+          margin-right: 0;
+        }
+      }
+
+      // Glued blocks
+      @for $i from 2 to $columns {
+        &.glued-#{$i} {
+          @include xs {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Inline-blocks grid (fro using in grid degradation, for example)
+.grid {
+  > div {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+  }
+
+  &.grid--for-two {
+    @include make-grid(2, 1.4%);
+  }
+
+  &.grid--for-three {
+    @include make-grid(3, 1.4%);
+  }
+}
+
+
+// Project Grids Mixin
+//////////////////////////////////////////////////////
+
+@mixin adaptive-grid($view) {
+  display: grid;
+
+  @if $view == "gridname" {
+    grid-template-columns: 1fr 1fr;
+    gap: 16vw;
+
+    @include sm {
+      gap: 7vw;
+    }
+
+    @include xs {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+}
