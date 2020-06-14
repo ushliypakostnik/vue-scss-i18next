@@ -95,7 +95,7 @@ iframe {
 // Lists
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0; // вот это становится проблемой
   margin: 0;
 }
 
