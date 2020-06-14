@@ -8,4 +8,12 @@
 // App styles
 @import "./global/_fixes.scss";
 
+// App styles
+@import "./projects/_widgets.scss";
+
+// App themes
+@import "./themes/_themes-content.scss";
+@import "./themes/_theme-dark.scss";
+@import "./themes/_theme-light.scss";
+
 // External libraries customization

@@ -23,6 +23,5 @@ export default {
     top: 0;
     padding-top: $gutter / 2;
     padding-bottom: $gutter / 2;
-    border-bottom: 1px solid $colors__border;
   }
 </style>

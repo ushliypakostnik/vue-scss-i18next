@@ -1,4 +1,4 @@
-// App common widgets styles
+// App common projects styles
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
@@ -54,7 +54,7 @@
   border: 1px solid $colors__border;
   border-radius: $border-radius__small;
   white-space: nowrap;
-  padding: ($gutter / 4) ($gutter / 2);
+  padding: ($gutter / 4) ($gutter / 2) !important; // перекрываем
 
   > li {
     display: inline-block;
