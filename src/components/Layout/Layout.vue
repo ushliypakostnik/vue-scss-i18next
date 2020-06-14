@@ -3,7 +3,7 @@
     <Header>
       <LangSwitch /><ThemeSwitch />
     </Header>
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

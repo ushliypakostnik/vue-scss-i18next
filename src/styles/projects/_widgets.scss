@@ -54,7 +54,8 @@
   border: 1px solid $colors__border;
   border-radius: $border-radius__small;
   white-space: nowrap;
-  padding: ($gutter / 4) ($gutter / 2) !important; // перекрываем
+  // следующая строчка не заработает без флага !important !!!
+  padding: ($gutter / 4) ($gutter / 2) !important; // перекрываем base в хэшах
 
   > li {
     display: inline-block;
@@ -64,6 +65,7 @@
       @include link-color($colors__primary, darken($colors__primary, $fade--percent));
     }
 
+    // слэш между вариантами
     &:not(:last-child) {
       &:after {
         text-align: center;
@@ -74,6 +76,7 @@
     }
   }
 
+  // отступ между переключателями
   & + .switch {
     margin-left: $gutter;
   }
