@@ -1,7 +1,8 @@
+/* eslint-disable import/no-cycle, no-shadow */
 import {
   AUTO_THEME,
 } from '@/utils/constants';
-import storage from '@/utils/storage'; // eslint-disable-line import/no-cycle
+import storage from '@/utils/storage';
 
 const initialState = {
   theme: AUTO_THEME,
@@ -10,12 +11,10 @@ const initialState = {
 
 const state = initialState;
 
-/* eslint-disable no-shadow */
 const getters = {
   theme: state => state.theme,
   language: state => state.language,
 };
-/* eslint-enable no-shadow */
 
 const actions = {
   changeTheme: ({ commit }, theme) => {
@@ -28,7 +27,6 @@ const actions = {
   },
 };
 
-/* eslint-disable no-shadow */
 const mutations = {
   changeTheme: (state, theme) => {
     state.theme = theme;
@@ -37,7 +35,6 @@ const mutations = {
     state.language = language;
   },
 };
-/* eslint-enable no-shadow */
 
 export default {
   namespaced: true,

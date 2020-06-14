@@ -3,7 +3,7 @@
     id="app"
     :class="`app--${theme}`"
   >
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

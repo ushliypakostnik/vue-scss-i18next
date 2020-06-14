@@ -1,6 +1,9 @@
 <!-- eslint-disable max-len -->
 <template>
-  <div :class="[ 'loader', `loader--${ name }` ]">
+  <div :class="[
+    'loader',
+    {name: `loader--${ name }`},
+  ]">
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

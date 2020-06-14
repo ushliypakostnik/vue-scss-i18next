@@ -1,7 +1,8 @@
+/* eslint-disable import/no-cycle */
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import utils from './modules/utils'; // eslint-disable-line import/no-cycle
+import utils from './modules/utils';
 
 Vue.use(Vuex);
 

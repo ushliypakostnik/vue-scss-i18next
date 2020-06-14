@@ -36,7 +36,6 @@ export default {
     },
   },
 
-
   methods: {
     changeTheme(theme) {
       this.$store.dispatch('utils/changeTheme', theme);
