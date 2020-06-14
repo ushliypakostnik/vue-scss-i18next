@@ -25,7 +25,8 @@
 
   &--vertical {
     input,
-    button { // stylelint-disable no-descending-specificity
+    // stylelint-disable-next-line no-descending-specificity
+    button {
       width: 100%;
     }
   }
@@ -68,9 +69,9 @@
     // слэш между вариантами
     &:not(:last-child) {
       &:after {
-        text-align: center;
         margin-left: $gutter / 4;
         margin-right: $gutter / 4;
+        text-align: center;
         content: " / ";
       }
     }
