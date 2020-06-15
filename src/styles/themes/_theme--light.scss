@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
-%theme-light {
+%theme--light {
   $colors__background: #fafafa !global;
   $colors__text: #6c7a89 !global;
   $colors__card: $colors__white !global;
@@ -15,8 +15,8 @@
 
 .app {
   &--light {
-    @extend %theme-light !optional;
+    @extend %theme--light !optional;
 
-    @include themes-content;
+    @include themes__content;
   }
 }

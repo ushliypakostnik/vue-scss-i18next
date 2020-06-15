@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
-%theme-dark {
+%theme--dark {
   $colors__background: #263340 !global;
   $colors__text: #aebfd0 !global;
   $colors__card: #1c2630 !global;
@@ -15,9 +15,9 @@
 
 .app {
   &--dark {
-    @extend %theme-dark !optional;
+    @extend %theme--dark !optional;
 
-    @include themes-content;
+    @include themes__content;
   }
 }
 
