@@ -6,10 +6,8 @@
 @import "_stylebase.scss";
 
 // App styles
-@import "./global/_fixes.scss";
-
-// App styles
-@import "./projects/_widgets.scss";
+@import "./project/_fixes.scss";
+@import "./project/_widgets.scss";
 
 // App themes
 @import "./themes/_themes__content";

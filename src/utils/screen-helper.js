@@ -1,36 +1,23 @@
+import { DESIGN } from '@/utils/constants';
+
 // Модуль экранный помощник
 const ScreenHelper = (() => {
   /* eslint-disable no-unused-vars */
   const NAME = 'ScreenHelper';
 
-  const Min = 320;
-  const XS = 360;
-  const SM = 768;
-  const MD = 1025;
-  const LG = 1240;
+  const TABLET = DESIGN.BREAKPOINTS.tablet;
+  const DESKTOP = DESIGN.BREAKPOINTS.desktop;
 
-  const isMin = () => {
-    return window.matchMedia(`(max-width: ${XS}px)`).matches;
+  const isMobile = () => {
+    return window.matchMedia(`(max-width: ${TABLET - 1}px)`).matches;
   };
 
-  const isXS = () => {
-    return window.matchMedia(`(max-width: ${SM - 1}px)`).matches;
-  };
-
-  const isSM = () => {
-    return window.matchMedia(`(min-width: ${SM}px) and (max-width: ${MD - 1}px)`).matches;
-  };
-
-  const isMD = () => {
-    return window.matchMedia(`(min-width: ${MD}px) and (max-width: ${LG - 1}px)`).matches;
+  const isTablet = () => {
+    return window.matchMedia(`(min-width: ${TABLET}px) and (max-width: ${DESKTOP - 1}px)`).matches;
   };
 
   const isDesktop = () => {
-    return window.matchMedia(`(min-width: ${MD}px)`).matches;
-  };
-
-  const isLG = () => {
-    return window.matchMedia(`(min-width: ${LG}px)`).matches;
+    return window.matchMedia(`(min-width: ${DESKTOP}px)`).matches;
   };
 
   const getOrientation = () => {
@@ -54,11 +41,8 @@ const ScreenHelper = (() => {
   };
 
   return {
-    isMin,
-    isXS,
-    isSM,
-    isMD,
-    isLG,
+    isMobile,
+    isTablet,
     isDesktop,
     getOrientation,
     getPixelRatio,

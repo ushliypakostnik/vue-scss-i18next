@@ -7,8 +7,8 @@ export const LOCALSTORAGE = {
   THEME: 'theme',
 };
 
-export const SESSIONSTORAGE = {
-};
+/* export const SESSIONSTORAGE = {
+}; */
 
 export const LANGUAGES = [
   { id: 1, name: 'en' },
@@ -28,6 +28,10 @@ const theme = localStorage.getItem(LOCALSTORAGE.THEME) || null;
 export const AUTO_THEME = theme || THEMES[1].name;
 
 export const DESIGN = {
+  BREAKPOINTS: {
+    tablet: 768,
+    desktop: 1240,
+  },
 };
 
 export const LOCALES = {
