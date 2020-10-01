@@ -103,20 +103,20 @@ $colors__placeholder: $colors__border !default;
 //////////////////////////////////////////////////////
 
 // Minimum Supported Width
-$breackpoints__min:                 320px;
+$breakpoints__min:                 320px;
 
 // Extra small screen / XS / phone
-$breackpoints__xs:                  359px;
+$breakpoints__xs:                  359px;
 
 // Small screen / SM / tablet
-$breackpoints__sm:                  768px;
+$breakpoints__sm:                  768px;
 
 // Medium screen / MD desktop / нетбуки типо чтоле
-$breackpoints__md:                  1025px;
+$breakpoints__md:                  1025px;
 
 // Large screen / LG desktop / небольшие экраны - ноуты
-$breackpoints__lg:                  1240px;
+$breakpoints__lg:                  1240px;
 
-$breackpoints__xs_max:              ($breackpoints__sm - 1);
-$breackpoints__sm_max:              ($breackpoints__md - 1);
-$breackpoints__md_max:              ($breackpoints__lg - 1);
+$breakpoints__xs_max:              ($breakpoints__sm - 1);
+$breakpoints__sm_max:              ($breakpoints__md - 1);
+$breakpoints__md_max:              ($breakpoints__lg - 1);

@@ -35,7 +35,7 @@ export default {
     padding-bottom: $header__height;
 
     .container {
-      max-width: $breackpoints__min;
+      max-width: $breakpoints__min;
       text-align: center;
     }
   }

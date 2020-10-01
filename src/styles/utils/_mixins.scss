@@ -7,55 +7,55 @@
 // Breackpoins in styles/utils/_variables.scss
 
 @mixin lg {
-  @media only screen and (min-width: $breackpoints__lg) {
+  @media only screen and (min-width: $breakpoints__lg) {
     @content;
   }
 }
 
 @mixin not-lg {
-  @media only screen and (max-width: $breackpoints__md_max) {
+  @media only screen and (max-width: $breakpoints__md_max) {
     @content;
   }
 }
 
 @mixin not-gadgets {
-  @media only screen and (min-width: $breackpoints__md) {
+  @media only screen and (min-width: $breakpoints__md) {
     @content;
   }
 }
 
 @mixin md {
-  @media only screen and (min-width: $breackpoints__md) and (max-width: $breackpoints__md_max) {
+  @media only screen and (min-width: $breakpoints__md) and (max-width: $breakpoints__md_max) {
     @content;
   }
 }
 
 @mixin sm {
-  @media only screen and (min-width: $breackpoints__sm) and (max-width: $breackpoints__sm_max) {
+  @media only screen and (min-width: $breakpoints__sm) and (max-width: $breakpoints__sm_max) {
     @content;
   }
 }
 
 @mixin gadgets {
-  @media only screen and (max-width: $breackpoints__sm_max) {
+  @media only screen and (max-width: $breakpoints__sm_max) {
     @content;
   }
 }
 
 @mixin not-xs {
-  @media only screen and (min-width: $breackpoints__sm) {
+  @media only screen and (min-width: $breakpoints__sm) {
     @content;
   }
 }
 
 @mixin xs {
-  @media only screen and (max-width: $breackpoints__xs_max) {
+  @media only screen and (max-width: $breakpoints__xs_max) {
     @content;
   }
 }
 
 @mixin min {
-  @media only screen and (max-width: $breackpoints__xs) {
+  @media only screen and (max-width: $breakpoints__xs) {
     @content;
   }
 }
@@ -63,7 +63,7 @@
 @mixin min--landscape {
   @include xs {
     @include landscape {
-      @media (max-height: ($breackpoints__min + 10px)) {
+      @media (max-height: ($breakpoints__min + 10px)) {
         @content;
       }
     }
@@ -92,7 +92,7 @@
 @mixin iPadPro--landscape {
   @media only screen and (orientation: landscape)
     and (min-height: 1000px)
-    and (min-width: ($breackpoints__md + 1px))
+    and (min-width: ($breakpoints__md + 1px))
     and (max-width: 1400px) {
     @content;
   }
@@ -101,16 +101,16 @@
 @mixin iPadPro--portrait {
   @media only screen and (orientation: portrait)
     and (min-height: 1300px)
-    and (min-width: ($breackpoints__md - 1px))
-    and (max-width: ($breackpoints__md + 50px)) {
+    and (min-width: ($breakpoints__md - 1px))
+    and (max-width: ($breakpoints__md + 50px)) {
     @content;
   }
 }
 
 @mixin iPhoneX--landscape {
   @media only screen and (orientation: landscape)
-    and (min-width: $breackpoints__sm)
-    and (max-width: ($breackpoints__md - 20px))
+    and (min-width: $breakpoints__sm)
+    and (max-width: ($breakpoints__md - 20px))
     and (max-height: 400px) {
     @content;
   }
@@ -118,8 +118,8 @@
 
 @mixin iPhoneX--portrait {
   @media only screen and (orientation: portrait)
-    and (min-height: $breackpoints__sm)
-    and (max-height: $breackpoints__md - 10px)
+    and (min-height: $breakpoints__sm)
+    and (max-height: $breakpoints__md - 10px)
     and (max-width: 450px) {
     @content;
   }
