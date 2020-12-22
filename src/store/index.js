@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import utils from './modules/utils';
+import utilities from './modules/utilities';
 
 Vue.use(Vuex);
 
@@ -10,7 +10,7 @@ const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
   modules: {
-    utils,
+    utilities,
   },
   strict: debug,
 });
