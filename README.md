@@ -1,7 +1,7 @@
 Vue cli based frontend boilerplate
 ==================================
 
-Vuie cli based frontend PWA example with localization and themezation
+Vue cli based frontend PWA example with localization and themezation
 
 Deploy
 ------
