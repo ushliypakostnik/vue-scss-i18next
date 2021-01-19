@@ -18,7 +18,7 @@ import { createNamespacedHelpers } from 'vuex';
 
 import { THEMES } from '@/utils/constants';
 
-const { mapGetters } = createNamespacedHelpers('utils');
+const { mapGetters } = createNamespacedHelpers('utilities');
 
 export default {
   name: 'ThemeSwitch',
@@ -38,7 +38,7 @@ export default {
 
   methods: {
     changeTheme(theme) {
-      this.$store.dispatch('utils/changeTheme', theme);
+      this.$store.dispatch('utilities/changeTheme', theme);
     },
   },
 };

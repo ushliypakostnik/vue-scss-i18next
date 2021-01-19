@@ -18,7 +18,7 @@ import { createNamespacedHelpers } from 'vuex';
 
 import { LANGUAGES } from '@/utils/constants';
 
-const { mapGetters } = createNamespacedHelpers('utils');
+const { mapGetters } = createNamespacedHelpers('utilities');
 
 export default {
   name: 'LangSwitch',
@@ -39,7 +39,7 @@ export default {
   methods: {
     changeLanguage(language) {
       this.$i18n.i18next.changeLanguage(language);
-      this.$store.dispatch('utils/changeLanguage', language);
+      this.$store.dispatch('utilities/changeLanguage', language);
     },
   },
 };

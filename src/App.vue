@@ -10,7 +10,7 @@
 <script>
 import { createNamespacedHelpers } from 'vuex';
 
-const { mapGetters } = createNamespacedHelpers('utils');
+const { mapGetters } = createNamespacedHelpers('utilities');
 
 export default {
   name: 'App',

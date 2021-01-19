@@ -32,12 +32,12 @@ i18next
 
     if (!AUTO_LANG) {
       if ([LANGUAGES[0].name, LANGUAGES[1].name].includes(l)) {
-        store.dispatch('utils/changeLanguage', l);
+        store.dispatch('utilities/changeLanguage', l);
       } else {
-        store.dispatch('utils/changeLanguage', LANGUAGES[0].name);
+        store.dispatch('utilities/changeLanguage', LANGUAGES[0].name);
       }
     } else {
-      store.dispatch('utils/changeLanguage', AUTO_LANG);
+      store.dispatch('utilities/changeLanguage', AUTO_LANG);
     }
   });
 
